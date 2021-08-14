@@ -6,10 +6,12 @@ import Button from 'react-bootstrap/Button'
 const headingStyle = {color:'red', backgroundColor:'black'}
 export default function Header ({title}) {
 
-
+const onClick = (e) => {
+  console.log("Hi!")
+}
   return (<header className="header">
 <h1> {title}</h1>
-<Button variant = "light" color = "green" className="add-btn"> Add</Button>
+<Button onClick={onClick} variant = "light" color = "green" className="add-btn"> Add</Button>
 
   </header>)
 }
