@@ -15,9 +15,14 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  border: 1px solid rgb(4, 135, 242);
+  background-color: rgb(6, 6, 6);
   padding: 30px;
   border-radius: 5px;
+}
+
+.container h1 {
+  color:greenyellow
 }
 
 .header {

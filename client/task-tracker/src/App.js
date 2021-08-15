@@ -3,6 +3,8 @@ import { useState } from 'react'
 import './App.css';
 import Tasks from './components/Tasks';
 import Header from './components/Header';
+import Navs from './components/Navbar';
+
 function App() {
 
   const [tasks, setTasks] = useState([
@@ -34,9 +36,12 @@ setTasks(tasks.filter((task)=>task.id !== id))
 
     }
   return (
-    <div className="container">
-      <Header></Header>
-      <Tasks tasks={tasks} onDelete={deleteTask}></Tasks>
+    <div className = "app">
+      <Navs></Navs>
+      <div className="container">
+    <Header></Header>
+      {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask}></Tasks>) : (<h3 style={{color:'red', background:'black'}}> OOPS YOU'RE FREE FOR TODAY!!!</h3>)} 
+    </div>
     </div>
   );
 }
